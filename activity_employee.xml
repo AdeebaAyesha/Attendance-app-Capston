@@ -4,131 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#060638"
     tools:context=".EmployeeActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="336dp"
-        app:layout_constraintBottom_toTopOf="@+id/id"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="264dp"
-        app:layout_constraintBottom_toTopOf="@+id/id"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.996"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img" />
-
-    <EditText
-        android:id="@+id/id"
-        android:layout_width="211dp"
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="72dp"
-        android:backgroundTint="#fe951c"
-        android:ems="10"
-        android:hint="Teacher ID"
-        android:inputType="textPersonName"
-        android:textColor="#FBFAFA"
-        android:textColorHint="#A5A2A2"
+        android:background="#060638"
+        android:gravity="center|right"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#fe951c"
-        android:ems="10"
-        android:hint="Enter Your Email"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#FBFAFA"
-        android:textColorHint="#A5A2A2"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
+        android:background="#D6D3D3"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_2" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="20dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_3" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="20dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        android:background="#D6D3D3"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#fe951c"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#FBFAFA"
-        android:textColorHint="#A5A2A2"
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Profile"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/report"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Report"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/markAttendance"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Mark Attendance"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:background="#D6D3D3"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="334dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#D6D3D3"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#fe951c"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="textPersonName"
-        android:textColor="#FBF9F9"
-        android:textColorHint="#AAA1A1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <TextView
-        android:id="@+id/alreadyhaveaccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Already Have Account"
-        android:textColor="#FDFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/reg_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/reg_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
-        android:backgroundTint="#fe951c"
-        android:text="REGISTER
-"
-        android:textColor="#FDFDFD"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        <TextView
+            android:id="@+id/viewAttendance"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="View Attendance"
+            android:textSize="14sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
