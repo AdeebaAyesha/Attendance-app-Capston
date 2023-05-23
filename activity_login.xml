@@ -11,9 +11,9 @@
         android:id="@+id/logo"
         android:layout_width="97dp"
         android:layout_height="57dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toStartOf="@+id/logotext"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -34,85 +34,108 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/id"
-        android:layout_width="209dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#E88C03"
-        android:ems="10"
-        android:hint="Enter Your ID"
-        android:inputType="textPersonName"
-        android:textColor="#FDFBFB"
-        android:textColorHighlight="#B8B6B6"
-        android:textColorHint="#AEA9A9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logotext" />
-
-    <EditText
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#fe951c"
-        android:ems="10"
-        android:hint="Enter Your Email"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#FDFBFB"
-        android:textColorHint="#B5AEAE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#fe951c"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#FDFBFB"
-        android:textColorHint="#B5AEAE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
-
-    <TextView
-        android:id="@+id/createnewaccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#fe951c"
-        android:text="Create New Account"
-        android:textColor="#FFFDFD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.643"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <Button
-        android:id="@+id/log_btn"
-        android:layout_width="92dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#FF9800"
-        android:text="LOGIN"
-        android:textColor="#FDFDFD"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:orientation="vertical"
+        android:background="@drawable/profile_back"
+        android:layout_margin="20dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createnewaccount"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="209dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/edit_txt_background"
+            android:ems="10"
+            android:gravity="center|start"
+            android:hint="Enter Your ID"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:textColor="#060638"
+            android:textColorHighlight="#9A9999"
+            android:textColorHint="#807D7D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logotext" />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="209dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_txt_background"
+            android:ems="10"
+            android:gravity="center|start"
+            android:hint="Enter Your Email"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="10dp"
+            android:textColor="#060638"
+            android:textColorHint="#807D7D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="209dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_txt_background"
+            android:ems="10"
+            android:gravity="center|start"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="10dp"
+            android:textColor="#060638"
+            android:textColorHint="#807D7D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        <TextView
+            android:id="@+id/createnewaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#fe951c"
+            android:text="Create New Account"
+            android:textColor="#060638"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.643"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <Button
+            android:id="@+id/log_btn"
+            android:layout_width="92dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#FF9800"
+            android:text="LOGIN"
+            android:textColor="#060638"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createnewaccount"
+            app:layout_constraintVertical_bias="0.023" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

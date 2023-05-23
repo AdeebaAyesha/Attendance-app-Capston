@@ -1,7 +1,4 @@
-package com.example.attendance;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.report;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -93,10 +93,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void sendUserToNextActivity() {
+
         String s=id.getText().toString();
         String s2=password.getText().toString();
+        String s3=userName.getText().toString();
         if (s.equals(s2)){
+//            Intent profileIntent = new Intent(getApplicationContext(), ProfileActivity.class);
+//            profileIntent.putExtra("email", mUser.getEmail());
             Intent intent =new Intent(LoginActivity.this,EmployeeActivity.class);
+            intent.putExtra("Word", s3);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }else{

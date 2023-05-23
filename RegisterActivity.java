@@ -1,7 +1,4 @@
-package com.example.attendance;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.report;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -46,6 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
         id = findViewById(R.id.id);
         progressDialog = new ProgressDialog(this);
 
+        getSupportActionBar().hide();
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child("Admin");
@@ -106,12 +107,13 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void sendUserToNextActivity() {
-        String ids = (String) id.getText().toString();
-        String use = (String) userName.getText().toString();
-        String pass =(String) password.getText().toString();
+        String ida = (String) id.getText().toString();
+   //     String name = (String) names.getText().toString();
+        String use =(String) userName.getText().toString();
+        String pas =(String) password.getText().toString();
 
 
-        Users users = new Users(ids,use,pass);
+        Users users = new Users(ida,use,pas);
         databaseReference.push().setValue(users);
 
         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
